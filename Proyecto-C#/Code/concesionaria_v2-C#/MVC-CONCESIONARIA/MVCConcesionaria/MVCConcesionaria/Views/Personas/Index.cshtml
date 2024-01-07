@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MVCConcesionaria.Models.Persona>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Clientes</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonaDNI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonaDNI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PersonaId" class="boton amarillo"><i class="fas fa-pencil-alt"></i></a>
+                <a asp-action="Details" asp-route-id="@item.PersonaId" class="boton verde "><i class="fas fa-info-circle"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.PersonaId" class="boton rojo"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

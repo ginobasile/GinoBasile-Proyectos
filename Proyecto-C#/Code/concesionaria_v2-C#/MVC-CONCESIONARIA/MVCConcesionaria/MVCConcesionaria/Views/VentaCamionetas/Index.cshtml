@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MVCConcesionaria.Models.VentaCamioneta>
+
+@{
+    ViewData["Title"] = "Index";
+    List<VentaCamioneta> items = (List<VentaCamioneta>)ViewBag.items;
+}
+
+<h1>Lista de camionetas vendidas</h1>
+
+<p>
+    <a asp-action="Create">Vender camioneta</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cliente.PersonaDNI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.camioneta.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.camioneta.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.camioneta.Anio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.camioneta.Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in items)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cliente.PersonaDNI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.camioneta.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.camioneta.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.camioneta.Anio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.camioneta.Precio)
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

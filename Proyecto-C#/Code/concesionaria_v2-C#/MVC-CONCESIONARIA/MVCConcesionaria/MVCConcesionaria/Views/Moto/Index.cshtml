@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MVCConcesionaria.Models.Moto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Motos</h1>
+
+<p>
+    <a asp-action="Create">Agregar una Moto</a>
+</p>
+<p>
+    <a asp-controller="VentaMotoes" asp-action="Index">Lista de moto vendidos</a>
+</p>
+<p>
+    <a asp-controller="VentaMotoes" asp-action="Create">Vender moto</a>
+</p>
+<div class="img-container" img-container">
+    @foreach (var item in Model)
+    {
+        <div class="photo-index-card">
+            @if (item.ImageName != null)
+            {
+                <div class="photo-display">
+                    <img class="photo-display-img" src="@Url.Action("GetImage", "Moto", new { Id = item.ID })" />
+                </div>}
+        <div>
+            <p class="display-label">
+                Tipo: @Html.DisplayFor(model => item.Tipo)
+            </p>
+            <p class="display-label">
+                Marca: @Html.DisplayFor(model => item.Marca)
+            </p>
+            <p class="display-label">
+                Modelo: @Html.DisplayFor(model => item.Modelo)
+            </p>
+            <p class="display-label">
+                Anio: @Html.DisplayFor(model => item.Anio)
+            </p>
+            <p class="display-label">
+                Precio: $@Html.DisplayFor(model => item.Precio)
+            </p>
+            @if (item.EsUsado)
+            {
+        <p class="display-label">Usado: @Html.DisplayFor(model => item.CantKm)km</p> }
+    else
+    {
+        <p class="display-label">Nuevo</p>}
+        </div>
+            <div class="contender">
+                <a asp-action="Edit" asp-route-id="@item.ID" class="boton amarillo"><i class="fas fa-pencil-alt"></i></a> 
+                <a asp-action="Details" asp-route-id="@item.ID" class="boton verde "><i class="fas fa-info-circle"></i></a> 
+                <a asp-action="Delete" asp-route-id="@item.ID" class="boton rojo"><i class="fas fa-trash-alt"></i></a>
+            </div>
+        </div>}
+</div>
+ 

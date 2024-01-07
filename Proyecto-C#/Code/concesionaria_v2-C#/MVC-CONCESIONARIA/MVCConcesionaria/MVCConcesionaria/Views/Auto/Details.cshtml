@@ -1,0 +1,64 @@
+﻿@model MVCConcesionaria.Models.Auto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalle</h1>
+
+<div>
+    <h4>Auto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CantPuertas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CantPuertas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EsUsado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EsUsado)
+        </dd>
+        @if (Model.EsUsado == true)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CantKm)
+            </dt>
+
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CantKm)
+            </dd>
+        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Anio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Anio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="boton amarillo"><i class="fas fa-pencil-alt"></i></a>
+    <a asp-action="Index" class="boton azul"><i class="fas fa-backward"></i></a>
+</div>

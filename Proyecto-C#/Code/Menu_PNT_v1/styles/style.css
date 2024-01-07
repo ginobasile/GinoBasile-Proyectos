@@ -1,0 +1,129 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+#logo img {
+    height: 70px;
+    width: auto;
+    margin: 0px 5px 0px 15px;
+}
+#logo p {
+    font-size: 22px;
+    font-weight: bold;
+}
+p{
+    margin:0px
+}
+
+#title{
+    font-size: 32px;
+    margin: 15px;
+    color: rgb(219, 124, 38);
+    font-weight: bold;
+    text-align: center;
+}
+
+#principales img{
+    max-width: 265px;
+    margin: 5px 2px;
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.comida{
+    width: 47%;
+}
+#principales h2{
+    text-align: center;
+    background-color: aliceblue;
+    color: rgb(219, 124, 38);
+    padding: 7px;
+}
+.comida h3{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    padding: 10px 50px;
+    margin: 5px 50px;
+    font-size: 20px;
+    text-align: center;
+}
+.comida p {
+    padding: 5px 80px;
+}
+#postres{
+    width: 75.5%;
+}
+ #postres h3{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    padding: 10px 50px;
+    margin: 5px 50px;
+    font-size: 20px;
+    text-align: center;
+ }
+ #postres p{
+    text-align: center;
+ }
+footer{
+    margin-top: 35px;
+    background-color: rgb(219, 124, 38);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0px 150px;
+}
+#redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#redes i{
+    font-size: 18px;
+    color: aliceblue;
+    margin: 0px 10px;
+}
+#redes p{
+    color: aliceblue;
+    font-size: 18px;
+    margin-right: 10px;
+}
+#logo_footer{
+    display: flex;
+    align-items: center;
+}
+#logo_footer img {
+    height: 40px;
+    width: auto;
+    margin: 0px 5px 0px 15px;
+}
+#logo_footer p {
+    font-size: 16px;
+    font-weight: bold;
+    color: aliceblue;
+}

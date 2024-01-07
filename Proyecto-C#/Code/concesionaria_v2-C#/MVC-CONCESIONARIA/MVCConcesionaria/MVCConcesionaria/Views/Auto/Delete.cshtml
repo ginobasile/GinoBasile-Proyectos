@@ -1,0 +1,67 @@
+﻿@model MVCConcesionaria.Models.Auto
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Estas seguro que queres editarlo?</h3>
+<div>
+    <h4>Auto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CantPuertas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CantPuertas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EsUsado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EsUsado)
+        </dd>
+        @if (Model.EsUsado == true)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CantKm)
+            </dt>
+
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CantKm)
+            </dd>
+        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Anio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Anio)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="boton asul"><i class="fas fa-backward"></i></a>
+    </form>
+</div>

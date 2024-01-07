@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navgraph"
+    app:startDestination="@id/homePrincipal">
+    <fragment
+        android:id="@+id/paquetesLista"
+        android:name="com.example.gimnasio_grupo3.fragments.paquetes.PaquetesLista"
+        android:label="fragment_paquetes_lista"
+        tools:layout="@layout/fragment_paquetes_lista" >
+        <action
+            android:id="@+id/action_paquetesLista_to_crearPaquete"
+            app:destination="@id/crearPaquete" />
+        <action
+            android:id="@+id/action_paquetesLista_to_detallePaquete"
+            app:destination="@id/detallePaquete" />
+    </fragment>
+    <fragment
+        android:id="@+id/turnosLista"
+        android:name="com.example.gimnasio_grupo3.fragments.turnos.TurnosLista"
+        android:label="fragment_turnos_lista"
+        tools:layout="@layout/fragment_turnos_lista" >
+        <action
+            android:id="@+id/action_turnosLista_to_crearTurno"
+            app:destination="@id/crearTurno" />
+        <action
+            android:id="@+id/action_turnosLista_to_detalleTurno"
+            app:destination="@id/detalleTurno" />
+        <action
+            android:id="@+id/action_turnosLista_to_misTurnos"
+            app:destination="@id/misTurnos" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePrincipal"
+        android:name="com.example.gimnasio_grupo3.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homePrincipal_to_profesoresLista"
+            app:destination="@id/profesoresLista" />
+        <action
+            android:id="@+id/action_homePrincipal_to_usuariosLista"
+            app:destination="@id/usuariosLista" />
+        <action
+            android:id="@+id/action_homePrincipal_to_detalleUsuario"
+            app:destination="@id/detalleUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/actividadesLista"
+        android:name="com.example.gimnasio_grupo3.fragments.actividades.ActividadesLista"
+        android:label="fragment_actividades_lista"
+        tools:layout="@layout/fragment_actividades_lista" >
+        <action
+            android:id="@+id/action_actividadesLista_to_detalleActividad"
+            app:destination="@id/detalleActividad" />
+        <action
+            android:id="@+id/action_actividadesLista_to_crearActividad"
+            app:destination="@id/crearActividad" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleActividad"
+        android:name="com.example.gimnasio_grupo3.fragments.actividades.DetalleActividad"
+        android:label="fragment_detalle_actividad"
+        tools:layout="@layout/fragment_detalle_actividad" >
+        <argument
+            android:name="actividad"
+            app:argType="com.example.gimnasio_grupo3.entities.Actividad" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearPaquete"
+        android:name="com.example.gimnasio_grupo3.fragments.paquetes.CrearPaquete"
+        android:label="fragment_crear_paquete"
+        tools:layout="@layout/fragment_crear_paquete" />
+    <fragment
+        android:id="@+id/detallePaquete"
+        android:name="com.example.gimnasio_grupo3.fragments.paquetes.DetallePaquete"
+        android:label="fragment_detalle_paquete"
+        tools:layout="@layout/fragment_detalle_paquete" >
+        <argument
+            android:name="datosPaquete"
+            app:argType="com.example.gimnasio_grupo3.entities.Paquete" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearActividad"
+        android:name="com.example.gimnasio_grupo3.fragments.actividades.CrearActividad"
+        android:label="fragment_crear_actividad"
+        tools:layout="@layout/fragment_crear_actividad" />
+    <fragment
+        android:id="@+id/crearTurno"
+        android:name="com.example.gimnasio_grupo3.fragments.turnos.CrearTurno"
+        android:label="fragment_crear_turno"
+        tools:layout="@layout/fragment_crear_turno" >
+        <argument
+            android:name="profesoresList"
+            app:argType="com.example.gimnasio_grupo3.entities.Profesor[]" />
+        <argument
+            android:name="actividadesList"
+            app:argType="com.example.gimnasio_grupo3.entities.Actividad[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleTurno"
+        android:name="com.example.gimnasio_grupo3.fragments.turnos.DetalleTurno"
+        android:label="fragment_detalle_turno"
+        tools:layout="@layout/fragment_detalle_turno" >
+        <argument
+            android:name="datosTurno"
+            app:argType="com.example.gimnasio_grupo3.entities.Turno" />
+        <argument
+            android:name="actividadesList"
+            app:argType="com.example.gimnasio_grupo3.entities.Actividad[]" />
+        <argument
+            android:name="profesoresList"
+            app:argType="com.example.gimnasio_grupo3.entities.Profesor[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/profesoresLista"
+        android:name="com.example.gimnasio_grupo3.fragments.profesores.ProfesoresLista"
+        android:label="fragment_profesores_lista"
+        tools:layout="@layout/fragment_profesores_lista" >
+        <action
+            android:id="@+id/action_profesoresLista_to_crearProfesor"
+            app:destination="@id/crearProfesor" />
+        <action
+            android:id="@+id/action_profesoresLista_to_detalleProfesor"
+            app:destination="@id/detalleProfesor" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearProfesor"
+        android:name="com.example.gimnasio_grupo3.fragments.actividades.CrearProfesor"
+        android:label="CrearProfesor" />
+    <fragment
+        android:id="@+id/detalleProfesor"
+        android:name="com.example.gimnasio_grupo3.fragments.profesores.DetalleProfesor"
+        android:label="DetalleProfesor" >
+        <argument android:name="datosProfesor"
+            app:argType="com.example.gimnasio_grupo3.entities.Profesor" />
+    </fragment>
+    <fragment
+        android:id="@+id/usuariosLista"
+        android:name="com.example.gimnasio_grupo3.fragments.usuarios.UsuariosLista"
+        android:label="UsuariosLista" >
+        <action
+            android:id="@+id/action_usuariosLista_to_detalleUsuario"
+            app:destination="@id/detalleUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleUsuario"
+        android:name="com.example.gimnasio_grupo3.fragments.usuarios.DetalleUsuario"
+        android:label="fragment_detalle_usuario"
+        tools:layout="@layout/fragment_detalle_usuario" >
+        <argument
+            android:name="usuario"
+            app:argType="com.example.gimnasio_grupo3.entities.Usuario" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.gimnasio_grupo3.activities.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/misTurnos"
+        android:name="com.example.gimnasio_grupo3.fragments.turnos.MisTurnos"
+        android:label="fragment_mis_turnos"
+        tools:layout="@layout/fragment_mis_turnos" >
+        <argument
+            android:name="profesoresList"
+            app:argType="com.example.gimnasio_grupo3.entities.Profesor[]" />
+        <argument
+            android:name="actividadesList"
+            app:argType="com.example.gimnasio_grupo3.entities.Actividad[]" />
+        <argument
+            android:name="turnosList"
+            app:argType="com.example.gimnasio_grupo3.entities.Turno[]" />
+    </fragment>
+</navigation>

@@ -1,0 +1,213 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+#formulario{
+    background-image: url('../images/delivery.jpg') ;
+}
+header{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+#logo img {
+    height: 70px;
+    width: auto;
+    margin: 0px 5px 0px 15px;
+}
+#logo p {
+    font-size: 22px;
+    font-weight: bold;
+}
+nav{
+    display: flex ;
+}
+.button {
+    font-size: 18px;
+    margin: 2px 7px;
+    font-weight: bold;
+    border: 1px solid aliceblue;
+    padding: 7px;
+    color: aliceblue;
+    background-color: rgb(219, 124, 38);
+}
+
+.button:hover {
+    background-color: aliceblue;
+    color:rgb(219, 124, 38);
+    border: 1px solid rgb(219, 124, 38);
+    transition: 600ms;
+}
+p{
+    margin:0px
+}
+
+#title{
+    font-size: 32px;
+    margin: 15px;
+    color: rgb(219, 124, 38);
+    font-weight: bold;
+    text-align: center;
+}
+
+#principales img{
+    max-width: 265px;
+    margin: 5px 2px;
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.comida{
+    width: 47%;
+}
+#principales h2{
+    text-align: center;
+    background-color: aliceblue;
+    color: rgb(219, 124, 38);
+    padding: 7px;
+}
+.comida h3{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    padding: 10px 50px;
+    margin: 5px 50px;
+    font-size: 20px;
+    text-align: center;
+}
+.comida p {
+    padding: 5px 80px;
+}
+#postres{
+    width: 75.5%;
+}
+ #postres h3{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    padding: 10px 50px;
+    margin: 5px 50px;
+    font-size: 20px;
+    text-align: center;
+ }
+ #postres p{
+    text-align: center;
+ }
+footer{
+    margin-top: 35px;
+    background-color: rgb(219, 124, 38);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0px 150px;
+}
+#redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#redes i{
+    font-size: 18px;
+    color: aliceblue;
+    margin: 0px 10px;
+}
+#redes p{
+    color: aliceblue;
+    font-size: 18px;
+    margin-right: 10px;
+}
+#logo_footer{
+    display: flex;
+    align-items: center;
+}
+#logo_footer img {
+    height: 40px;
+    width: auto;
+    margin: 0px 5px 0px 15px;
+}
+#logo_footer p {
+    font-size: 16px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#contacto {
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    background-color:  rgb(219, 124, 38);
+    /*box-sizing: border-box;*/
+    margin: 70px 70px 35px;
+    
+}
+#form-contender{
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+    justify-content: center;
+}
+#submit_form{
+    margin: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.section_form h2{
+    text-align: center;
+    background-color: aliceblue;
+    color: rgb(219, 124, 38);
+    padding: 7px;
+    margin-bottom: 15px;
+}
+.section_form{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+.flex{
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.flex label {
+    margin: 5px;
+    width: 30%;
+}
+.flex select, .flex input{
+    border: unset;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+}
+.flex input[type=number] {
+    width: 30px;
+    text-align: center
+}
+.section_form textarea {
+    resize: none;
+    width: 90%;
+    padding: 7px;
+}

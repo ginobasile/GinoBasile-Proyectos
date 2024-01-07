@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+#logo img {
+    height: 70px;
+    width: auto;
+    margin: 0px 5px 0px 15px;
+}
+#logo p {
+    font-size: 22px;
+    font-weight: bold;
+}
+#principales img{
+    max-width: 265px;
+    margin: 5px 2px;
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#principales h2{
+    text-align: center;
+    background-color: aliceblue;
+    color: rgb(219, 124, 38);
+    padding: 7px;
+}
+
+#cerveza h2{
+    text-align: center;
+    background-color: aliceblue;
+    color: rgb(219, 124, 38);
+}
+
+.comida h3{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+    padding: 5px;
+}
+.comida li {
+    padding: 3px;
+}
+#cervezas h3{
+    background-color: rgb(219, 124, 38);
+    color: aliceblue;
+}

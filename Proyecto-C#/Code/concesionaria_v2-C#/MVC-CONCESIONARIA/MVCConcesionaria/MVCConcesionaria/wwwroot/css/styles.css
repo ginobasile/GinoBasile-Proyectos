@@ -1,0 +1,106 @@
+﻿.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5vh 2.5vw;
+    justify-content: center;
+}
+
+.photo-index-card {
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 12%);
+    max-width: 250px;
+    background-color:#FFF;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    margin:25px;
+    padding:16px;
+}
+
+.photo-display-img {
+    width: 100%;
+    margin: 0px;
+    height: 200px;
+    margin-bottom:5px;
+}
+.photo-display {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.img-container {
+    margin: 20px 50px;
+}
+body {
+    background-color :#e7e7e7 !important;
+}
+.display-label{
+    font-weight:bold;
+}
+.contender{
+    display:flex;
+    justify-content:center
+}
+.boton {
+    margin: 0px 10px;
+    align-self: center;
+    color: #fff;
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 100%;
+}
+.amarillo {
+    background-color: rgb(163, 144, 36);
+}
+.amarillo:hover {
+    background-color: #fff;
+    color: rgb(163, 144, 36);
+    border: 1px solid rgb(163, 144, 36);
+}
+.verde {
+    background-color: rgb(0, 153, 0);
+}
+
+.verde:hover {
+    background-color: #fff;
+    color: rgb(0, 153, 0);;
+    border: 1px solid rgb(0, 153, 0);
+}
+
+.rojo {
+    background-color: rgb(156, 1, 1);
+}
+
+.rojo:hover {
+    background-color: #fff;
+    color: rgb(156, 1, 1);
+    border: 1px solid rgb(156, 1, 1);
+}
+.asul {
+    background-color: rgb(8, 42, 147);
+}
+.asul:hover {
+    background-color: #fff;
+    color: rgb(8, 42, 147);
+    border: 1px solid rgb(8, 42, 147);
+}
+.none{
+    display: none;
+}
+.form-control, .form-field {
+    margin: 15px 0px;
+}
+.background {
+    background-image: url("https://img.freepik.com/fotos-premium/concesionario-automoviles-fondo-borroso-aplicacion-fondo_88135-32531.jpg?w=2000");
+    height:700px;
+    width:100%;
+}
+.background h1 {
+    margin:15px;
+    font-weight:bold;
+    text-align:center;
+    font-size:48px;
+}
+.container{
+    margin:0px;
+}
